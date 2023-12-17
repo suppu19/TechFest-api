@@ -12,8 +12,7 @@ pipeline {
                     sh "docker build -t ambika-api ."
 
                     // Tag Docker image
-                    sh "docker tag ambika-api:latest 303968369354.dkr.ecr.ap-south-1.amazonaws.com/ambika-api:latest"g
-
+                    sh "docker tag ambika-api:latest 303968369354.dkr.ecr.ap-south-1.amazonaws.com/ambika-api:latest"
                     // Push Docker image to ECR
                     sh "docker push 303968369354.dkr.ecr.ap-south-1.amazonaws.com/ambika-api:latest"
                 }
