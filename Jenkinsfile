@@ -31,7 +31,7 @@ pipeline {
                     // Pull Docker image from ECR
                     sh "docker pull 381492160554.dkr.ecr.us-east-1.amazonaws.com/tech-feast:latest"
 
-                    // Remove existing container if it exists
+                    // Remove existing container if it exists ok
                     sh 'docker container ls -a -f name=My-practice-website-api -q | xargs -r docker container rm -f'
 
                     // Run Docker container
