@@ -35,7 +35,7 @@ pipeline {
                     sh 'docker container ls -a -f name=My-practice-website-api -q | xargs -r docker container rm -f'
 
                     // Run Docker container
-                    sh "docker run -itd --name My-practice-website-api -p 172.31.48.72:3000:3000 381492160554.dkr.ecr.us-east-1.amazonaws.com/tech-feast:latest"
+                    sh "docker run -itd --name My-practice-website-api -p 3000:3000 381492160554.dkr.ecr.us-east-1.amazonaws.com/tech-feast:latest"
                     // You may add additional Docker run options or environment variables as needed
                     // sh "docker run -itd  -p 4200:80 --name My-practice-website-client  ng serve --host 0.0.0.0"
                 }
